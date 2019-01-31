@@ -1,4 +1,5 @@
 class Owner
+<<<<<<< HEAD
   @@owners = [] 
   attr_reader :species
   attr_accessor :name, :pets
@@ -8,6 +9,13 @@ class Owner
                      :fishes => [], 
                      :dogs => [], 
                      :cats => []})
+=======
+  attr_accessor :name, :pets
+  attr_reader :species
+  @@owners = [] 
+  
+  def initialize(species, pets = {:fishes => [], :dogs => [], :cats => []})
+>>>>>>> c27cc393ff596296cca6d9add4f77cfc2ba3db5a
     @species = species
     @pets = pets 
     @@owners << self 
@@ -54,14 +62,21 @@ class Owner
   end 
   
   def sell_pets
+<<<<<<< HEAD
     @pets.each do |species, for_sale|
       for_sale.each {|pet| pet.mood = "nervous"}
+=======
+    @pets.each {|species, for_sale| for_sale.each {|pet| pet.mood = "nervous"}}
+>>>>>>> c27cc393ff596296cca6d9add4f77cfc2ba3db5a
     end
     @pets = {}
   end
   
+<<<<<<< HEAD
   def list_pets 
         "I have #{@pets[:fishes].length} fish, #{@pets[:dogs].length} dog(s), and #{@pets[:cats].length} cat(s)."
   end 
   
+=======
+>>>>>>> c27cc393ff596296cca6d9add4f77cfc2ba3db5a
 end
